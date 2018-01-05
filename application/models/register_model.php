@@ -8,10 +8,10 @@ class register_model extends CI_Model
         parent::__construct();
     }
 
-    //7 Parameter
+    //7 Info Parameter "cssdddd"
     public function createAccount($ac, $pw, $email, $access, $stat, $datCreate, $datLog)
     {
-
+        $bool = false;
         $data = array(
             'account' => $ac,
             'password' => $pw,
@@ -21,8 +21,14 @@ class register_model extends CI_Model
             'data_create' => $datCreate,
             'data_log' => $datLog
         );
+        try {
+            $bool = true;
+            $this->db->insert('user', $data);
+        } catch (Exception $e) {
+            return $bool = false;
+        }
 
-        $this->db->insert('user', $data);
+        return $bool;
     }
 
 }

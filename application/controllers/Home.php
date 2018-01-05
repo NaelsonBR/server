@@ -18,7 +18,7 @@ class Home extends CI_Controller
             'title' => 'Home'
         );
 
-        $this->preCreateAccount();
+        echo $this->preCreateAccount();
         //helpDeleteAllRegister("user");
 
 
@@ -30,7 +30,7 @@ class Home extends CI_Controller
 
     public function preCreateAccount(){
         $istModel = new register_model();
-        $istModel->createAccount(
+        return $istModel->createAccount(
             "naelson"
             ,
             encrypt('124456')
