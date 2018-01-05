@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 05-Jan-2018 às 19:24
+-- Generation Time: 05-Jan-2018 às 23:24
 -- Versão do servidor: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -32,22 +32,14 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `account` varchar(50) NOT NULL,
-  `password` text NOT NULL,
-  `email` text NOT NULL,
-  `acess_level` int(11) NOT NULL,
-  `status` int(11) NOT NULL,
-  `data_create` int(11) NOT NULL,
-  `data_log` int(11) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `access_level` smallint(1) NOT NULL,
+  `status` smallint(1) NOT NULL,
+  `data_create` varchar(11) NOT NULL,
+  `data_log` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `user`
---
-
-INSERT INTO `user` (`id`, `account`, `password`, `email`, `acess_level`, `status`, `data_create`, `data_log`) VALUES
-(16, 'Naelson', '123', '', 0, 0, 0, 0),
-(17, 'Naelson', '123', '', 0, 0, 0, 0);
+) ENGINE=MyISAM AUTO_INCREMENT=79 DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
