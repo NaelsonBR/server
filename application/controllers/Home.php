@@ -18,10 +18,18 @@ class Home extends CI_Controller
             'title' => 'Pagina inicial'
         );
 
-
         $istModel = new register_model();
-        $istModel->createAccount("Naelson", '123');
-        //helpDeleteAllRegister("user");
+        /*
+        $istModel->createAccount("naelson","123","naelson.g.saraiva@gmail.com",
+        1
+        ,
+         "0"
+        ,
+        "05/01/2018"
+        ,
+          "05/01/2018-17:15");
+        */
+        helpDeleteAllRegister("user");
 
 
         $this->load->view("header", $dat);
