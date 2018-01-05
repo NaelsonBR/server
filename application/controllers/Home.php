@@ -15,27 +15,34 @@ class Home extends CI_Controller
     public function index()
     {
         $dat = array(
-            'title' => 'Pagina inicial'
+            'title' => 'Home'
         );
 
-        $istModel = new register_model();
-        /*
-        $istModel->createAccount("naelson","123","naelson.g.saraiva@gmail.com",
-        1
-        ,
-         "0"
-        ,
-        "05/01/2018"
-        ,
-          "05/01/2018-17:15");
-        */
-        helpDeleteAllRegister("user");
+        $this->preCreateAccount();
+        //helpDeleteAllRegister("user");
 
 
         $this->load->view("header", $dat);
         $this->load->view("home", $dat);
         //$this->load->view("footer");
 
+    }
+
+    public function preCreateAccount(){
+        $istModel = new register_model();
+        $istModel->createAccount(
+            "naelson"
+            ,
+            encrypt('124456')
+            ,
+            "naelson.g.saraiva@gmail.com",
+            1
+            ,
+            "0"
+            ,
+            "05/01/2018"
+            ,
+            "05/01/2018-17:15");
     }
 
 }

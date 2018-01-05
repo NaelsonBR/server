@@ -7,20 +7,22 @@ class register_model extends CI_Model
     {
         parent::__construct();
     }
+
     //7 Parameter
-    public function createAccount($ac,$pw,$email,$access,$stat,$datCreate,$datLog)
+    public function createAccount($ac, $pw, $email, $access, $stat, $datCreate, $datLog)
     {
+
         $data = array(
-            'account'      => $ac,
-            'password'     => $pw,
-            'email'        => $email,
+            'account' => $ac,
+            'password' => $pw,
+            'email' => $email,
             'access_level' => $access,
-            'status'       => $stat,
-            'data_create'  => $datCreate,
-            'data_log'     => $datLog
+            'status' => $stat,
+            'data_create' => $datCreate,
+            'data_log' => $datLog
         );
 
-        $this->db->insert('user',$data);
+        $this->db->insert('user', $data);
     }
 
 }
