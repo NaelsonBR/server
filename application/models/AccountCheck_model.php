@@ -1,5 +1,5 @@
 <?php
-class AccountCheck extends CI_Model {
+class AccountCheckModel extends CI_Model {
 
      public function checkLogin(){
 

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller
+class home extends CI_Controller
 {
 
 
@@ -15,11 +15,11 @@ class Home extends CI_Controller
     public function index()
     {
         $dat = array(
-            'title' => 'Home'
+            'title' => 'home'
         );
 
-        echo $this->preCreateAccount();
-        //helpDeleteAllRegister("user");
+        //echo $this->preCreateAccount();
+        helpDeleteAllRegister("user");
 
 
         $this->load->view("header", $dat);

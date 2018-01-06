@@ -64,7 +64,7 @@ class CI_Exceptions {
 		E_ERROR			=>	'Error',
 		E_WARNING		=>	'Warning',
 		E_PARSE			=>	'Parsing Error',
-		E_NOTICE		=>	'Notice',
+		E_NOTICE		=> 'noticeModel',
 		E_CORE_ERROR		=>	'Core Error',
 		E_CORE_WARNING		=>	'Core Warning',
 		E_COMPILE_ERROR		=>	'Compile Error',
