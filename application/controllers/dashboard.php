@@ -1,9 +1,11 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-class dashboard extends CI_Controller
-{
+class dashboard extends CI_Controller{
+
     function __construct()
     {
+
         parent::__construct();
     }
 
@@ -15,6 +17,9 @@ class dashboard extends CI_Controller
     }
 
     public function loginDashboard(){
+        $stylesheet = new assets();
+        $stylesheet->styleAssPublic();
+
         $this->load->view('admin/login');
     }
 

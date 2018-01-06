@@ -1,25 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class home extends CI_Controller
-{
+class home extends CI_Controller {
 
+   function __construct(){parent::__construct();}
 
-    function __construct()
-    {
+    public function index() {
 
-        // $this->obHelp = new func();
-        parent::__construct();
-    }
-
-    public function index()
-    {
         $dat = array(
             'title' => 'home'
         );
 
-        //echo $this->preCreateAccount();
-        helpDeleteAllRegister("user");
+        //echo $this->preCreateAccount();     //For create a account
+        helpDeleteAllRegister("user"); //For delete all register
 
 
         $this->load->view("header", $dat);
