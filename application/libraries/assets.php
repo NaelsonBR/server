@@ -1,6 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+/*
+ * Author naelson.g.saraiva@gmail.com
+ * 06/01/2018
+ * Library for include
+ */
 class assets {
     function __construct(){}
     public function styleAssPublic(){
@@ -21,9 +25,10 @@ class assets {
             'css'  => $css['bootstrap'].$css['dashboard'].$css['public'],
             'js'   => $js['bootstrap'],
         );
-        // 1 css, 2 js, 3 icon
-        echo $url['css'].$url['js'].$url['icon'];
 
+        
+        // Position for loading 1 css, 2 js, 3 icon
+        echo $url['css'].$url['js'].$url['icon'];
 
         //CSS
         //echo '<link rel="stylesheet" href="'. base_url("assets/css/bootstrap.min.css").'";>';
@@ -33,7 +38,6 @@ class assets {
 
         //JAVASCRIPT
         //echo'<script type="text/javascript" src="'. base_url("assets/js/bootstrap.min.js").'"></script>';
-
 
     }
 

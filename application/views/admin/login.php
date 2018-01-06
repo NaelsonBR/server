@@ -3,11 +3,11 @@
 
         <div class="row">
             <div class="col-sm-3 col-md-3 text-center" id="title-login">
-               <h5 class="text-secondary m-1">Painel de controler <i class="material-icons md-48">face</i></h5>
+               <h5 class="text-secondary m-1"><i class="material-icons" id="icon-login">https</i>Painel de controler</h5>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-5 col-md-5" id="form">
+            <div class="col-sm-4 col-md-4" id="form">
 
                 <form method="POST">
 
