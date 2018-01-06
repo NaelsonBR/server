@@ -21,8 +21,8 @@ class assets {
             'css'  => $css['bootstrap'].$css['dashboard'].$css['public'],
             'js'   => $js['bootstrap'],
         );
-
-        echo $url['icon'].$url['css'].$url['js'];
+        // 1 css, 2 js, 3 icon
+        echo $url['css'].$url['js'].$url['icon'];
 
 
         //CSS
