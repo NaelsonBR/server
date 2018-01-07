@@ -24,7 +24,7 @@ class assets {
 
         $url = array(
             'icon' => '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">',
-            'css'  => $css['bootstrap'].$css['dashboard'].$css['public'],
+            'css'  => $css['bootstrap'].$css['dashboard'],
             'js'   => $js['jquery'].$js['global'].$js['bootstrap'],
         );
 
