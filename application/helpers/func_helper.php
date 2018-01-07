@@ -1,9 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-function display()
+function changeLanguage()
 {
-    echo "Ola sou uma function";
+
+
 }
 
 //Function for delete all register;
