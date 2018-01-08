@@ -1,1 +1,4 @@
-//alert('teste');
+//
+$(function () {
+
+});

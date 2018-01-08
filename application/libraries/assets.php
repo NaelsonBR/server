@@ -16,8 +16,8 @@ class assets {
         );
 
         $js = array(
-            'bootstrap' => '<script type="text/javascript" src="'. base_url("assets/js/bootstrap.min.js").'"></script>',
             'jquery'    => '<script type="text/javascript" src="'. base_url("assets/js/jquery-3.2.1.js").'"></script>',
+            'bootstrap' => '<script type="text/javascript" src="'. base_url("assets/js/bootstrap.min.js").'"></script>',
             'global'    => '<script type="text/javascript" src="'. base_url("assets/js/global.js").'"></script>',
 
         );
@@ -25,7 +25,7 @@ class assets {
         $url = array(
             'icon' => '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">',
             'css'  => $css['bootstrap'].$css['dashboard'],
-            'js'   => $js['jquery'].$js['global'].$js['bootstrap'],
+            'js'   => $js['jquery'].$js['bootstrap'].$js['global'],
         );
 
 

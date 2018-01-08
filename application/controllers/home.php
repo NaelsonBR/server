@@ -12,7 +12,7 @@ class home extends CI_Controller {
         );
 
         //echo $this->preCreateAccount();     //For create a account
-        helpDeleteAllRegister("user"); //For delete all register
+        //helpDeleteAllRegister("user"); //For delete all register
 
 
         $this->load->view("header", $dat);
@@ -22,13 +22,15 @@ class home extends CI_Controller {
     }
 
     public function preCreateAccount(){
-        $istModel = new register_model();
-        return $istModel->createAccount(
+
+        $this->load->model('register_model');
+
+        return $this->register_model->createAccount(
             "naelson"
             ,
-            encrypt('124456')
+            '123'
             ,
-            "naelson.g.saraiva@gmail.com",
+            "naes5n.g.saraiva@gmail.com",
             1
             ,
             "0"

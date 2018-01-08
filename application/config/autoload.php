@@ -89,7 +89,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('func','funcEncrypt','url');
+$autoload['helper'] = array('func','funcEncrypt','url',);
 
 /*
 | -------------------------------------------------------------------
@@ -117,7 +117,7 @@ $autoload['config'] = array();
 | "codeigniter_lang.php" would be referenced as array('codeigniter');
 |
 */
-$autoload['language'] = array('pt-br');
+$autoload['language'] = array();
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +132,4 @@ $autoload['language'] = array('pt-br');
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('register_model');
+$autoload['model'] = array();
