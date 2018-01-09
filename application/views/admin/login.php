@@ -29,9 +29,9 @@
                     <h3 class="text-danger text-center m-1">
                         <?php  if(isset($errInfo)) echo $errInfo; ?>
                     </h3>
-                    <h3 class="text-success text-center m-1">
+                    <h5 class="text-success text-center m-1">
                         <?php  if(isset($successInfo)) echo $successInfo; ?>
-                    </h3>
+                    </h5>
 
                 <?php echo validation_errors(); ?>
                 <?php echo form_close(); ?>

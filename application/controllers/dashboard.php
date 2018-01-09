@@ -17,11 +17,10 @@ class dashboard extends CI_Controller{
         $this->assets->styleAssPublic();
         //END INCLUDES
 
-
+/*
         $sessionUserID = $this->session->sessionId;
-
         echo "ID session =".$sessionUserID;
-
+*/
         $this->load->view('admin/header',$dat);
         $this->load->view('admin/menu');
         $this->load->view('admin/content');
@@ -92,7 +91,7 @@ class dashboard extends CI_Controller{
            }
            else{
                $arr = array(
-                   'errInfo'    => 'Dados não conferem!'
+                   'errInfo'    => 'Senha incorreta, tente novamente'
 
                );
 
