@@ -124,7 +124,7 @@
     background-color: #2D2D2D;
     color: white;
     outline: none;
-    border-radius: 50px;
+    border-radius: 15px;
     border: solid 1px white;
     opacity: 0.7;
 
@@ -152,6 +152,12 @@
 
 /* menu */
 
+.menu-left{
+    width: 15%;
+    background-color: #2c3e50;
+    height: 766px;
+}
+
 .menu-left .list-menu{
     position: absolute;
     left: 0;
@@ -163,8 +169,7 @@
     text-align: center;
     list-style: none;
     display: inline-block;
-    width: 20%;
-    transition: 1s;
+    width: 15%;
 
 }
 
@@ -173,10 +178,15 @@
         width: 100%;
 
     }
+
+    .menu-left{
+        background-color: white;
+        height: 0; /* (menu-left) fundo do menu que esta a x px é zerado*/
+    }
+
 }
 .list-menu li{
     width: 100% !important;
-
 }
 
 .menu-icon{
