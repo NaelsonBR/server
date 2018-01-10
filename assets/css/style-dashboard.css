@@ -54,18 +54,15 @@
 
 #admin-config{
     color: white;
-    font-size: 50px;
-    margin-top: 10px;
+    font-size: 30px;
+    margin-top: 20px;
     float: right;
 }
 
 #admin-config:hover{
-    color: white;
-    font-size: 50px;
-    margin-top: 10px;
-    float: right;
     cursor: pointer;
 }
+
 
 .drag-menu {
     list-style: none;
@@ -151,6 +148,12 @@
     cursor: pointer;
 }
 
+@media (max-width: 500px) and (min-width: 266px ) {
+    #home{
+        font-size: 40px !important;
+        top: 15px;
+    }
+}
 
 /* menu */
 
@@ -183,6 +186,8 @@
     }
     .letters-all-menu{
         visibility: visible !important;
+        margin-right: 80px;
+        font-size: 14px;
     }
     .menu-left{
 
