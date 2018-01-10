@@ -186,7 +186,6 @@
     }
     .letters-all-menu{
         visibility: visible !important;
-        margin-right: 80px;
         font-size: 14px;
     }
     .menu-left{
@@ -195,6 +194,51 @@
         height: 0; /* (menu-left) fundo do menu que esta a x px é zerado*/
     }
 
+    .div-dashboard-list{
+
+    }
+
+    .list-menu li div{
+        display: block !important;
+        overflow: hidden;
+        height: 0.1px;
+        transition: 2s;
+
+    }
+
+
+    .dashboard-list2{
+        padding: 0 !important;
+    }
+
+    .div-dashboard-list .dashboard-list2 li{
+       width: 100%;
+
+    }
+    .div-dashboard-list li{
+       list-style: none;
+    }
+
+
+    .btn-menu-dashboard2{
+        opacity: 0.8;
+        background-color: #EE4B3E;
+        height: 48px;
+        width: 100% !important;
+        color: white;
+        border: none;
+        z-index: 100;
+    }
+
+    .btn-menu-dashboard2:hover{
+        cursor: pointer;
+        opacity: 0.9;
+        background-color: #EE4B3E;
+    }
+
+    .dashboard-list > li{
+        display: none!important;
+    }
 }
 .list-menu li{
     width: 100% !important;
@@ -254,7 +298,11 @@
 }
 
 /* DASHBOARD LIST */
+.div-dashboard-list{
+    display: none !important;
+}
 
+/* */
 .list-menu li .dashboard-list{
     display: none;
     position: absolute;
@@ -307,6 +355,7 @@
     font-size: 30px !important;
     color: white;
     margin-top: -4px;
+
 }
 
 /*

@@ -31,5 +31,25 @@ $(function () {
         $('.dashboard-list').removeClass('dashboard-list-javascript').addClass('dashboard-list');
 
     });
+
+
+});
+
+
+var num = 0;
+$(function () {
+
+    $('#btn-dashboard-id').bind('click',function () {
+        num = num +1;
+        if(num === 1)
+       $('.div-dashboard-list').css('height','98px');
+
+        if (num === 2){
+            $('.div-dashboard-list').css('height','0.1px');
+            num = 0;
+        }
+
+    });
+
 });
 
