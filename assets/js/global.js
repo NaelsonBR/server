@@ -36,7 +36,7 @@ $(function () {
 });
 
 
-var num = 0;
+var num = 0; //Global
 $(function () {
 
     $('#btn-dashboard-id').bind('click',function () {
@@ -49,6 +49,25 @@ $(function () {
             num = 0;
         }
 
+    });
+
+});
+
+
+/* Shapes forma */
+
+$(function () {
+    $('#admin-config').bind('click',function () {
+
+        num = num +1;
+        if(num === 1){
+            $('.bg-config').show();
+        }
+
+        if(num === 2){
+            $('.bg-config').css('display','none');
+            num = 0;
+        }
     });
 
 });

@@ -1,8 +1,4 @@
-<style>
-    .menu-left{  background-color: #2c3e50; }
 
-
-</style>
 <nav class="menu-left">
     <ul class="list-menu">
 

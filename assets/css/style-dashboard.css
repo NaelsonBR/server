@@ -217,6 +217,17 @@
 
 }
 
+.list-menu:hover{      /* HOVER MENU LEFT*/
+    cursor: pointer;
+}
+
+.list-menu li:hover{
+    cursor: pointer;
+}
+
+.list-menu li a:hover{
+    cursor: pointer;
+}
 
 .list-menu li a button:hover{
     cursor: pointer;
@@ -420,3 +431,5 @@ menu encolher.
     display: inline     !important;
     list-style: none    !important;
 }
+
+

@@ -24,6 +24,7 @@ class dashboard extends CI_Controller{
         $this->load->view('admin/header',$dat);
         $this->load->view('admin/menu');
         $this->load->view('admin/content');
+        $this->load->view('admin/editores/colorCss');
 
     }
 

@@ -10,6 +10,8 @@
     <script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>"></script>
     <script src="https://use.fontawesome.com/77aee86c6a.js"></script>
 
+
+
 </head>
 <body>
 
@@ -17,6 +19,7 @@
 <div class="bg-top">
     <div class="container-fluid">
         <div class="bg-top">
+
             <i class="material-icons" id="home">dashboard</i>
 
             <ul class="drag-menu">
@@ -28,6 +31,11 @@
             <input type="text" name="search" placeholder=" Search.." id="search">
 
             <i class="fa fa-cog fa-spin fa-3x fa-fw" id="admin-config"></i>
+
+            <div class="bg-config">
+                <div class="Shapes-top"></div>
+
+            </div>
 
         </div>
     </div>
