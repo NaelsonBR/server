@@ -42,7 +42,7 @@ class dashboard extends CI_Controller{
 
     public function leave(){
         $this->load->library("session");
-        echo "saiu";
+
 
            if( $this->session->userdata('logged_in') == true ){
                echo "asas";
@@ -57,7 +57,6 @@ class dashboard extends CI_Controller{
 
         }else {
 
-                echo "01";
                redirect('admin/login');
              }
 
