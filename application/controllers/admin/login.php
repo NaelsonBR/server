@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Naelson
- * Date: 12/01/2018
- * Time: 12:59
- */
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class login extends CI_Controller{
 
@@ -16,6 +11,7 @@ class login extends CI_Controller{
         //Includes
 
         $this->assets->styleAssPublic();
+
 
         $this->load->language('pt-br','brasilian');
 
@@ -61,18 +57,27 @@ class login extends CI_Controller{
             );
 
 
-            $bool =  $this->check->validation($arr['email'],$arr['password']);
+            $bool =  $this->check->validation($arr['email'],$arr['password']); //Validando
 
             if ($bool == true){
 
-                $arr = array(
-                    'successInfo'    => 'Login successful',
-                    'sessionId'      => $this->check->getId()
+                $arrMsg = array(
+                    'successInfo'       => 'Login successful'
                 );
 
-                $this->session->sessionId = $arr["sessionId"];
-                $this->load->view('admin/login',$arr);
-                header("Refresh: 1; online");
+
+                $this->load->library("session");
+                $arrSession = array(
+                    'logged_in' =>      true,
+                    'id' =>             $this->check->getId($arr['email']),
+                    'acc_level' =>      $this->check->getLevel($arr['email'])
+                );
+
+
+                $this->session->set_userdata($arrSession);
+                $this->load->view('admin/login',$arrMsg);
+                header("Refresh: 1; logged");
+
             }
             else{
                 $arr = array(

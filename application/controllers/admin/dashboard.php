@@ -17,17 +17,50 @@ class dashboard extends CI_Controller{
         $this->assets->styleAssPublic();
         //END INCLUDES
 
-/*
-        $sessionUserID = $this->session->sessionId;
-        echo "ID session =".$sessionUserID;
-*/
-        $this->load->view('admin/header',$dat);
-        $this->load->view('admin/menu');
-        $this->load->view('admin/content');
-        $this->load->view('admin/editores/colorCss');
+
+
+
+        if( $this->session->userdata('logged_in') == true AND $this->session->userdata('acc_level') == 1){ // Protection
+
+
+            $this->load->view('admin/header',$dat);
+            $this->load->view('admin/menu');
+            $this->load->view('admin/content');
+            $this->load->view('admin/editores/colorCss');
+
+
+        }
+        else {
+
+            echo "<h1 class='text-center text-secondary'>Você não tem permissão para acessar esta area!</h1>";
+            header("Refresh: 2; login");
+            show_404();
+
+        }
 
     }
 
+    public function leave(){
+        $this->load->library("session");
+        echo "saiu";
 
+           if( $this->session->userdata('logged_in') == true ){
+               echo "asas";
+
+               if ( $this->session->unset_userdata('logged_in') == 0)
+                redirect('admin/login');
+               else{
+                   echo "<h1 class='text-center text-secondary'>Sessão inicializada!</h1>";
+                   show_404();
+               }
+
+
+        }else {
+
+                echo "01";
+               redirect('admin/login');
+             }
+
+    }
 
 }

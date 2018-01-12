@@ -37,7 +37,7 @@
                 <ul class="config-body">
                     <li><a href="#"><button type="button">Aparencia</button></a></li>
                     <li><a href="#"><button type="button">Linguagem</button></a></li>
-                    <li><a href="#"><button type="button">Sair</button></a></li>
+                    <li><a href="<?= base_url('admin/leave') ?>"><button type="button">Sair</button></a></li>
                 </ul>
 
             </div>
