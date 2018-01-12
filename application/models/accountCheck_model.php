@@ -20,11 +20,11 @@ class accountCheck_Model extends CI_Model {
 
      }
 
-    public function getId(){
+    public function getId($ac){
 
         $result = $this->db->select('id')
           ->from('user')
-          ->where('email', 'naelson.g.saraiva@gmail.com')->get();
+          ->where('email', $ac)->get();
 
         $id = 0;
         foreach ($result->result_array() as $row) {
@@ -34,6 +34,21 @@ class accountCheck_Model extends CI_Model {
         }
 
       return $id;
+    }
+
+    //Retorna acesso de livel administrador
+    public function getLevel($ac){
+        $result = $this->db->select('access_level')
+            ->from('user')
+            ->where('email', $ac)->get();
+
+        $lv = 0;
+
+        foreach ($result->result_array() as $row) {
+            $lv =  $row['access_level'];
+        }
+
+        return $lv;
     }
 
 }
