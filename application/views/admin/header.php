@@ -20,7 +20,7 @@
     <div class="container-fluid">
         <div class="bg-top">
 
-            <i class="material-icons" id="home">dashboard</i>
+            <a href="<?= base_url("admin")?>"><i class="material-icons" id="home">dashboard</i></a>
 
             <ul class="drag-menu">
                 <li><i class="material-icons" id="chevron_left">chevron_left</i></li>
@@ -28,12 +28,17 @@
                 <li><i class="material-icons" id="chevron_right">chevron_right</i></li>
             </ul>
 
-            <input type="text" name="search" placeholder=" Search.." id="search">
+            <!--<input type="text" name="search" placeholder=" Search.." id="search"> -->
 
             <i class="fa fa-cog fa-spin fa-3x fa-fw" id="admin-config"></i>
 
             <div class="bg-config">
                 <div class="Shapes-top"></div>
+                <ul class="config-body">
+                    <li><a href="#"><button type="button">Aparencia</button></a></li>
+                    <li><a href="#"><button type="button">Linguagem</button></a></li>
+                    <li><a href="#"><button type="button">Sair</button></a></li>
+                </ul>
 
             </div>
 

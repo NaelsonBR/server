@@ -156,13 +156,13 @@
 }
 
 .bg-config{
-    background-color: #393939;
+    background-color: #f3f3f3;
     height: 200px;
     width: 250px;
     position: absolute;
     right: 0;
     margin-right: 14px;
-    margin-top: 15px;
+    margin-top: -2px;
     z-index: 100;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
@@ -176,11 +176,47 @@
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-bottom: 40px solid #393939;
+    border-bottom: 20px solid #f3f3f3;
     position: absolute;
-    right: 0;
-    top: -40px;
+    right: -0.4px;
+    top: -20.5px;
 
+
+
+}
+
+.config-body{
+    margin: 5px 0 0 ;
+    padding: 0 0 0;
+    text-align: center;
+}
+
+.config-body li{
+    margin-top: 1px;
+    list-style: none;
+}
+
+.config-body li a{
+    text-decoration: none;
+
+}
+.config-body li a button{
+    margin: auto;
+    width: 50%;
+    cursor: pointer;
+    border: none;
+    background-color: #eaeaea;
+    color: #131313;
+    font-size: 14px;
+
+}
+
+.config-body li a button:hover{
+    width: 100%;
+    transition: 0.5s;
+    background-color: #131313;
+    color: white;
+    opacity: 0.8;
 
 }
 

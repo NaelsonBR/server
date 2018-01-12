@@ -72,3 +72,10 @@ $(function () {
 
 });
 
+
+$(function () {
+    $('.bg-config').hover(function () {
+    },function () {
+        $('.bg-config').css('display','none');
+    })
+});
