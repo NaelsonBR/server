@@ -1,7 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Naelson
- * Date: 11/01/2018
- * Time: 23:26
- */
+/* Map color layout CMS */
+//header("Content-type: text/css");
+$color_top = "";
+
+?>
+
+
+<style type="text/css">
+
+    .bg-top{ /* Top */
+        background-color: <?= $color_top?>;
+    }
+
+
+
+
+</style>
