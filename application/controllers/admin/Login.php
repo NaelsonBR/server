@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class login extends CI_Controller{
+class Login extends CI_Controller{
 
     public function index(){
 
@@ -9,8 +9,6 @@ class login extends CI_Controller{
 
     public function loginDashboard(){
         //Includes
-
-        $this->assets->styleAssPublic();
 
 
         $this->load->language('pt-br','brasilian');
@@ -45,11 +43,12 @@ class login extends CI_Controller{
 
         if ($this->form_validation->run() == FALSE)
         {
-            $this->load->view('admin/login',$dat);
+            $this->load->view('admin/Login',$dat);
         }
         else
         {
-            $this->load->model('accountCheck_Model','check');
+
+            $this->load->model('AccountCheck_model','check');
 
             $arr = array(
                 'email'    => $this->input->post('email'),
@@ -66,7 +65,7 @@ class login extends CI_Controller{
                 );
 
 
-                $this->load->library("session");
+
                 $arrSession = array(
                     'logged_in' =>      true,
                     'id' =>             $this->check->getId($arr['email']),
@@ -75,7 +74,7 @@ class login extends CI_Controller{
 
 
                 $this->session->set_userdata($arrSession);
-                $this->load->view('admin/login',$arrMsg);
+                $this->load->view('admin/Login',$arrMsg);
                 header("Refresh: 1; logged");
 
             }
@@ -85,7 +84,7 @@ class login extends CI_Controller{
 
                 );
 
-                $this->load->view('admin/login',$arr);
+                $this->load->view('admin/Login',$arr);
 
             }
 

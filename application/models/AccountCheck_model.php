@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class accountCheck_Model extends CI_Model {
+class AccountCheck_model extends CI_Model {
        function __construct()
        {
            parent::__construct();
