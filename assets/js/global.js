@@ -55,7 +55,6 @@ $(function () {
 
 
 /* Shapes forma */
-
 $(function () {
     $('#admin-config').bind('click',function () {
 
@@ -72,10 +71,11 @@ $(function () {
 
 });
 
-
+//hide scroll mouse area configuration
 $(function () {
-    $('.bg-config').hover(function () {
-    },function () {
+    $(window).scroll(function () {
         $('.bg-config').css('display','none');
     })
+
+
 });
