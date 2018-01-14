@@ -5,7 +5,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * 06/01/2018
  * Library for include
  */
-class assets {
+class Assets  {
+
     function __construct(){}
     public function styleAssPublic(){
 
@@ -33,8 +34,10 @@ class assets {
 
 
         // Position for loading 1 css, 2 js, 3 icon
-        echo $url['css'].$url['js'].$url['icon'];
+          ECHO ( $url['css'].$url['js'].$url['icon']);
 
     }
 
 }
+
+?>
